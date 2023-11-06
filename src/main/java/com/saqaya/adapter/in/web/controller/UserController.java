@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.saqaya.adapter.in.web.dto.GetUserRequestDto;
-import com.saqaya.adapter.in.web.dto.RegisterUserRequestDto;
-import com.saqaya.adapter.in.web.dto.RegisterUserResponseDto;
-import com.saqaya.adapter.in.web.dto.GetUserResponseDto;
-import com.saqaya.adapter.in.web.dto.GetUserWithEmailResponseDto;
+import com.saqaya.adapter.in.web.dto.request.GetUserRequestDto;
+import com.saqaya.adapter.in.web.dto.request.RegisterUserRequestDto;
+import com.saqaya.adapter.in.web.dto.response.GetUserResponseDto;
+import com.saqaya.adapter.in.web.dto.response.GetUserWithEmailResponseDto;
+import com.saqaya.adapter.in.web.dto.response.RegisterUserResponseDto;
 import com.saqaya.adapter.in.web.service.GetUserWebService;
 import com.saqaya.adapter.in.web.service.RegisterUserWebService;
 import com.saqaya.common.WebAdapter;

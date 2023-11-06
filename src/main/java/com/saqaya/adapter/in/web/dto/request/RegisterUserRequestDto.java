@@ -1,4 +1,4 @@
-package com.saqaya.adapter.in.web.dto;
+package com.saqaya.adapter.in.web.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
