@@ -47,7 +47,7 @@ public class JwtSecurityFilter extends OncePerRequestFilter {
         final String jwt = authHeader.substring(BEAER_STR_TOKEN.length());
         final String userId = jwtService.extractUserId(jwt);
 
-        if (hasNoToken(userId)) {
+        if (hasNoContext(userId)) {
             UserDetails userDetails = userDetailsService.loadUserByUsername(userId);
             log.info("UserDetails: {}", userDetails);
 
@@ -68,7 +68,7 @@ public class JwtSecurityFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    private boolean hasNoToken(String userId) {
+    private boolean hasNoContext(String userId) {
         return StringUtils.hasLength(userId)
                 && SecurityContextHolder.getContext().getAuthentication() == null;
     }
